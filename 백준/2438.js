@@ -12,16 +12,31 @@ const rl = readline.createInterface({
 
 rl.on('line', function (a) {
 
-    /**
-     * 백준 컴퓨터가 a에다가 변수 넣어줌.
-     * 아래에 코드를 작성하세요.
-     */
+  for(let i = 1; i <= 5; i++){
+    console.log('*'.repeat(i));
+  }
 
-    // 코드 작성, 매개변수 a
 
-    /**
-     * 여기까지 작성 영역
-     */
+  const arr = ['*','*','*','*','*'];
+  arr.forEach(function(e,index){
+      console.log(e.repeat(index + 1));
+  });
+
+
+  var star = '';
+  for (var i = 0; i < 5; i++) {
+    for (var j = 0; j <= i; j++) {
+        star += '*';
+    }
+    star += '\n';
+}
+console.log(star);
+
+  rl.close();
+}).on('close', function () {
+  process.exit();
+});
+
   rl.close();
 }).on('close', function () {
   process.exit();
